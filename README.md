@@ -11,7 +11,7 @@ About Me: A brief introduction about my background, education, and career goals 
 Contact Form: A user-friendly contact form that allows visitors to reach out for collaboration or inquiries.
 
 ## Technologies Used
-HTML5 
-CSS3 
-JavaScript 
+HTML5, 
+CSS3, 
+JavaScript. 
 Figma (for design mockups)
