@@ -1,140 +1,144 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family:Andale Mono, monospace;
+    box-sizing: border-box; /* Added for better box model handling */
+    font-family: Andale Mono, monospace;
     background: aliceblue;
 }
 
-.resume{
+.resume {
     position: relative;
     width: 100%;
-    height:100vh;
+    min-height: 100vh; /* Changed height to min-height for better responsiveness */
+    padding: 20px; /* Added padding for spacing */
 }
 
-nav{
+nav {
     display: flex;
     width: 84%;
-    margin :auto;
+    margin: auto;
     padding: 20px 0;
     align-items: center;
     justify-content: space-between;
 }
 
-nav h1{
+nav h1 {
     font-size: 50px;
-    top: 50%;
+    transition: color 0.3s ease; /* Added transition for hover effect */
 }
 
-nav h1:hover{
-    color:#F47216
+nav h1:hover {
+    color: #F47216;
+}
+
+nav ul {
+    display: flex; /* Changed to flex for better alignment */
+    gap: 20px; /* Added gap between items */
 }
 
 nav ul li {
-    display: inline;
     list-style: none;
-    padding: 20px;
-
 }
 
-nav ul li a{
-     text-decoration: none;
-     color: #000;
-     font-weight: bold;
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Added transition for hover effect */
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: #F47216;
 }
 
-
-.heading, .exp, .edu, .awards{
+.heading, .exp, .edu, .awards {
     margin-left: 8%;
 }
 
-.heading h1{
+.heading h1 {
     font-size: 80px;
     color: #000;
     margin-top: 3%;
+    transition: color 0.3s ease; /* Added transition for hover effect */
 }
 
-.heading h1:hover{
+.heading h1:hover {
     color: #F47216;
 }
 
-.heading a{
+.heading a {
     font-size: 50px;
     text-decoration: none;
 }
 
-hr{
-    margin:3% 8% 1% 8%;
+hr {
+    margin: 3% 8% 1% 8%;
 }
 
-.exp h2 ,.edu h2, .awards h2{
+.exp h2, .edu h2, .awards h2 {
     font-size: 30px;
-    color: #0000005f
-   
+    color: #0000005f;
 }
 
-.exp p, .edu p, .awards p{
+.exp p, .edu p, .awards p {
     margin-left: 40%;
     margin-top: 3%;
 }
 
-.exp span, .edu span, .awards span{
+.exp span, .edu span, .awards span {
     padding-left: 50px;
     font-size: 20px;
     font-weight: 700;
 }
 
-.exp h4, .edu h4, .awards h4{
-    font-size: 20;
+.exp h4, .edu h4, .awards h4 {
+    font-size: 20px; /* Added unit 'px' */
     color: #00000069;
     padding-top: 5px;
     margin-left: 51.2%;
 }
 
-.projects, .skills{
+.projects, .skills {
     text-align: center;
     margin: 2%;
 }
 
-.projects h1, .skills h1{
+.projects h1, .skills h1 {
     font-size: 50px;
     color: #0000005f;
     margin-bottom: 3%;
 }
 
-.projects span{
-    padding: 0 80px 0 80px;
+.projects span {
+    padding: 0 80px;
     font-size: 40px;
 }
 
-.projects span:hover{
+.projects span:hover {
     color: #F47216;
 }
 
-.projects a{
+.projects a {
     text-decoration: none;
     font-size: 30px;
 }
 
-.skills i{
-    padding: 10px 60px 0 60px;
+.skills i {
+    padding: 10px 60px;
     font-size: 60px;
     transition: transform 250ms;
 }
 
-.skills i:hover{
+.skills i:hover {
     color: #F47216;
     transform: scale(1.8);
 }
 
-.social1{
+.social1 {
     text-align: center;
 }
 
-.social1 i{
+.social1 i {
     padding: 10px;
     font-size: 40px;
     color: #000;
@@ -145,7 +149,114 @@ hr{
     padding-bottom: 20px;
 }
 
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    nav h1 {
+        font-size: 40px; /* Adjusting header size for tablets */
+    }
 
+    nav ul {
+        gap: 15px; /* Adjusting gap for smaller screens */
+    }
 
+    .heading h1 {
+        font-size: 60px; /* Adjusting size for smaller screens */
+    }
 
+    .heading a {
+        font-size: 40px; /* Adjusting download link size */
+    }
 
+    .exp h2, .edu h2, .awards h2 {
+        font-size: 25px; /* Adjusting section header size */
+    }
+
+    .exp p, .edu p, .awards p {
+        margin-left: 30%; /* Adjusting paragraph alignment */
+    }
+
+    .projects span {
+        padding: 0 40px; /* Adjusting spacing for project links */
+        font-size: 30px; /* Adjusting size for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .resume {
+        padding: 10px; /* Adding padding for smaller screens */
+    }
+
+    nav {
+        flex-direction: column; /* Stacking nav items */
+        align-items: center; /* Centering nav items */
+    }
+
+    .heading h1 {
+        font-size: 40px; /* Further reducing font size */
+    }
+
+    .heading a {
+        font-size: 30px; /* Further reducing download link size */
+    }
+
+    .exp p, .edu p, .awards p {
+        margin-left: 20%; /* Further adjusting paragraph alignment */
+    }
+
+    .projects span {
+        padding: 0 20px; /* Further adjusting spacing for project links */
+        font-size: 25px; /* Further adjusting size for smaller screens */
+    }
+
+    .skills i {
+        padding: 10px 30px; /* Adjusting padding for skill icons */
+        font-size: 50px; /* Adjusting size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px; /* Reducing padding */
+        flex-direction: column; /* Stacking nav items */
+    }
+
+    nav h1 {
+        font-size: 30px; /* Reducing header size */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stacking nav links */
+        align-items: center; /* Centering links */
+        gap: 10px; /* Reducing gap between links */
+    }
+
+    .resume {
+        padding: 5px; /* Reducing padding */
+    }
+
+    .heading h1 {
+        font-size: 25px; /* Further reducing font size */
+    }
+
+    .heading a {
+        font-size: 20px; /* Further reducing download link size */
+    }
+
+    .exp h2, .edu h2, .awards h2 {
+        font-size: 20px; /* Reducing section header size */
+    }
+
+    .exp p, .edu p, .awards p {
+        margin-left: 10%; /* Further adjusting paragraph alignment */
+    }
+
+    .projects span {
+        padding: 0 10px; /* Reducing padding for project links */
+        font-size: 20px; /* Reducing size for smaller screens */
+    }
+
+    .skills i {
+        padding: 10px 20px; /* Adjusting padding for skill icons */
+        font-size: 40px; /* Reducing size for smaller screens */
+    }
+}
